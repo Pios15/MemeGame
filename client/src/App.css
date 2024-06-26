@@ -1,42 +1,266 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* increase default icon size */
+i.bi {
+  font-size: 25px;
+}
+
+/*color of the header */
+.header {
+  background-image: linear-gradient(to right, #7801ff, #e48bf0, #7801ff);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/*Set the image HomeBackground as the background image of the homepage */
+.homeBackground {
+  background-image: linear-gradient(to right, #acb357, #c96761, #dee75c);
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100;
+}
+
+/*Set the image GameBackground as the background image of the game page */
+.gameBackground {
+  background-image: linear-gradient(to right, #f0ff17, #d41a0d);
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+}
+
+/*Set the image GameOverBackground as the background image of the game over page */
+.gameOverBackground {
+  background-image: linear-gradient(to right, #e48bf0, #7801ff);
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+}
+
+/*Set the image ProfileBackground as the background image of the profile page */
+.profileBackground {
+  background-image: linear-gradient(to bottom right, #acb357, #c96761, #dee75c);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
+/*Set the image ScoreboardBackground as the background image of the scoreboard page */
+.scoreboardBackground {
+  background-image: linear-gradient(to bottom, #d194a9, #ba54da, #2e005f);
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+}
+
+/*set to no wrap */
+.no-wrap {
+  white-space: nowrap;
+}
+
+/*increases the dimension of the button*/
+.button-size {
+  width: 100%;
+}
+
+/*definition of the transparent buttons*/
+.btn-transparent {
+  color: white;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.btn-transparent:hover {
+  color: black;
+  background-color: white;
+  border-color: transparent
+}
+
+/*buttons of the game cards*/
+/*direction buttons layout*/
+.btn-card {
+  color: rgb(0, 0, 0);
+  background-color: aquamarine;
+  font-size: 0.75rem;
+}
+
+.btn-card:hover {
+  color: white;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.5;
+}
+
+.btn-card:disabled {
+  color: white;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.5;
+}
+
+/*description buttons layout*/
+.btn-description {
+  color: white;
+  background-color: rgb(0, 0, 0);
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+.btn-description:hover {
+  color: rgb(15, 14, 14);
+  background-color: rgb(255, 174, 0);
+}
+
+.btn-description:disabled {
+  color: rgb(15, 14, 14);
+  background-color: rgb(255, 174, 0);
+}
+
+/*round title layout*/
+.round-title {
   text-align: center;
+  font-size: 2rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*Home buttons layout */
+.home-buttons {
+  color: black;
+  background-color: transparent;
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
+  
+  font-size: 18px; /* Increase font size */
+  width: 100%; /* Make the button full width */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.home-buttons:hover {
+  color: white;
+  background-color: black;
+  border: 1px solid black(0, 0, 0);
 }
 
-.card {
-  padding: 2em;
+/*New game button layout */
+.play-button {
+  color: white;
+  background-color: rgb(49, 165, 126);
+  border: 1px solid white;
+  justify-content: center;
+  align-items: center;
+  
+  font-size: 18px; /* Increase font size */
+  width: 100%; /* Make the button full width */
 }
 
-.read-the-docs {
-  color: #888;
+.play-button:hover {
+  color: white;
+  background-color: rgb(123, 221, 43);
+  border: 1px solid white;
 }
+
+.play-button:active {
+  color: white !important;
+  background-color: rgb(173, 238, 121) !important;
+  border: 1px solid white !important;
+}
+
+.card-header {
+  font-size: 2rem; /* Increase font size */
+  color: black; /* Make the text color black */
+}
+
+/*circular button layout*/
+.circular-button {
+  color: rgb(255, 255, 255); /* Black text color */
+  background-color: transparent; /* Transparent background */
+  border: 2px solid rgb(255, 255, 255); /* Black border */
+  border-radius: 50%; /* Make the button circular */
+  width: 50px; /* Set width */
+  height: 50px; /* Set height */
+  display: flex; /* Use flexbox for centering text */
+  justify-content: center; /* Center text horizontally */
+  align-items: center; /* Center text vertically */
+}
+
+.circular-button:hover {
+  color: rgb(0, 0, 0); /* White text color on hover */
+  background-color: rgb(255, 255, 255); /* Black background on hover */
+  border: 1px white;
+}
+
+.circular-button2 {
+  color: rgb(0, 0, 0); /* Black text color */
+  background-color: transparent; /* Transparent background */
+  border: 2px solid rgb(0, 0, 0); /* Black border */
+  border-radius: 50%; /* Make the button circular */
+  width: 50px; /* Set width */
+  height: 50px; /* Set height */
+  display: flex; /* Use flexbox for centering text */
+  justify-content: center; /* Center text horizontally */
+  align-items: center; /* Center text vertically */
+}
+
+.circular-button2:hover {
+  color: rgb(255, 255, 255); /* White text color on hover */
+  background-color: rgb(0, 0, 0); /* Black background on hover */
+  border: 1px rgb(0, 0, 0);
+}
+
+/*HomeButton layout*/
+.homeButton {
+  color: white;
+  background-color: transparent;
+  border: transparent;
+  font-size: 1rem;
+}
+
+.homeButton:hover {
+  color: white;
+  background-color: transparent;
+  border: transparent;
+}
+
+.homeButton:active {
+  color: white !important;
+  background-color: transparent !important;
+  border: transparent !important;
+}
+
+
+
+/*timer layout*/
+@keyframes timer {
+  0% { background-color: initial; }
+  100% { background-color: red; }
+}
+
+.timer {
+  display: inline-block;
+  padding: 5px;
+  padding-right: 20px;  /* Add right padding */
+  text-align: right;
+}
+
+.timer span {
+  animation-name: timer;
+  animation-duration: 33s;
+  animation-timing-function: linear;
+}
+
+.paused {
+  animation-play-state: paused !important;
+}
+
+/*endround banner*/
+.banner {
+  position: absolute;
+  z-index: 1;
+  width: 50%;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*endround banner button*/
+.banner-button {
+  color: white;
+  background-color: rgb(0, 0, 0);
+  border: 1px solid white;
+  font-size: 1rem;
+}
+
