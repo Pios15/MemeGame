@@ -103,10 +103,6 @@ function App() {
                             loggedIn ? <ProfileLayout logout={handleLogout} user={user} loggedIn={loggedIn}/>
                             :  <Navigate replace to='/' />
                         } />
-                        <Route path="/logout" element={ /* If the user is NOT logged-in, redirect to root */
-                            loggedIn ? <Navigate replace to='/' />
-                            : <Navigate replace to='/login' />
-                        } />
                         <Route path="/leaderboard" element={ /* If the user is NOT logged-in, redirect to root */
                             loggedIn ? <LeaderboardLayout user={user}/>
                             : <Navigate replace to='/login' /> 

@@ -64,6 +64,7 @@ export function InfosLayout() {
                                     <li>Each round presents you with a meme and seven captions.</li>
                                     <li>Out of the seven captions, two are the best fit for the meme. 🕵️‍♂️</li>
                                     <li>You have 30 seconds to choose the best caption. ⏳</li>
+                                    <li>Navigate through the captions with the arrows and try your senses!</li>
                                     <li>If you guess correctly, you earn 5 points! 🎯</li>
                                     <li>If you guess incorrectly, you earn 0 points. Better luck next time! 💔</li>
                                 </ul>
