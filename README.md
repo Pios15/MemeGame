@@ -139,7 +139,7 @@ There is also a field for the total amount of point obtained across every game.
 
 ![Screenshot1](https://github.com/polito-WA1-2024-exam/exam-1-Pios15/blob/main/img/Screenshot1.png)
 
-![Screenshot2](https://github.com/polito-WA1-2024-exam/exam-1-criicky/blob/main/img/Screenshot2.png)
+![Screenshot2](https://github.com/polito-WA1-2024-exam/exam-1-Pios15/blob/main/img/Screenshot2.png)
 
 
 ## Users Credentials
