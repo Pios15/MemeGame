@@ -4,6 +4,14 @@ import { useNavigate, useLocation } from "react-router-dom";
 import API from "../API.js";
 
 
+/*
+ * Game.jsx
+ * This file contains all the logic and components related to the Game and GameOver pages.
+ * It manages the game state, handles user interactions, and renders the game UI.
+ * It also handles the transition to the GameOver page when the game ends.
+ */
+
+
 //This function loads the rounds of the game and updates the score
 function Game({ user }) {
     const [image, setImage] = useState(null);
@@ -24,13 +32,11 @@ function Game({ user }) {
     const [timerExpired, setTimerExpired] = useState(false);
 
 
-
-
+//function for retrieving the rounds of the game, differentiating between logged and not logged games
     const fetchRound = () => {
         API.newGame()
             .then((data) => {
                 if(data.meme !== undefined) {
-                    console.log(data.meme);
                     setRounds(data);
                     setImage(data.meme);
                     setDescriptions(data.answers);
@@ -46,6 +52,7 @@ function Game({ user }) {
             });
     };
 
+    //function for submitting the answer, checking if it is the best answer and updating the score
     const submitAnswer = (description, image) => {
         API.isBest(description, image)
         .then((res) => {
@@ -83,10 +90,12 @@ function Game({ user }) {
         });
     }
     
+    //useEffect for fetching the rounds of the game when the component is mounted
     useEffect(() => {
         fetchRound()
     }, []);
     
+    //useEffect for updating the round when the banner is closed
     useEffect(() => {
         if (!showBanner && currentRound < rounds.length - 1) {
             setCurrentRound((current) => (current + 1));
@@ -112,7 +121,7 @@ function Game({ user }) {
     }, [showBanner]);
     
 
-
+    //useEffect for the timer, when the timer is over the round ends
     useEffect(() => {
         if (seconds > 0 && showBanner === false) {
             const timerId = setTimeout(() => {
@@ -122,7 +131,6 @@ function Game({ user }) {
         } else if (showBanner === true) {
             setSeconds(30); // Reset the timer when the banner is closed
         } else {
-            // Time's up! You can put your code here to handle what happens when the time is up
             setTimerExpired(true);
             API.errorCheck(image)
             .then((ans) => {
@@ -142,7 +150,7 @@ function Game({ user }) {
             .then((phrase) => {
                 setPhrase(phrase);
                 setPoints((points) => [...points, {meme: image, answer: descriptions[currentIndex], points: 0}]);
-                setShowBanner(true);  // Show the banner when the round endsS
+                setShowBanner(true);  // Show the banner when the round ends
             }).catch((err) => {
                 setErrorMessage(err.message);
                 setShow(true);
@@ -156,7 +164,7 @@ function Game({ user }) {
         <div style={{ position: 'relative' }}>
         {showBanner && (
             <Card className="mb-3 banner text-center">
-                <Button variant="banner-button" style={{ position: 'absolute', top: 0, right: 0 }} onClick={() => setShowBanner(false)}>
+                <Button variant="banner-button" style={{ position: 'absolute', top: 5, right: 5 }} onClick={() => setShowBanner(false)}>
                     <i className="bi bi-x-lg"></i>
                 </Button>
                 <Row >
@@ -287,7 +295,7 @@ function Gameover() {
                                 ))}
                             </ListGroup>
                         )}
-                        <Button className="home-buttons mt-3"  onClick={() => navigate("/game")} >New Game</Button>
+                        <Button className="home-buttons mt-3" variant='outline-dark' onClick={() => navigate("/game")} >New Game</Button>
                         </Col>
                     </Card.Body>
                 </Card>

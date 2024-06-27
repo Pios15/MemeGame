@@ -1,7 +1,7 @@
 
 
-import db from "../db.mjs";
-import Meme from "../Meme.mjs";
+import db from "../db/db.mjs";
+import Meme from "../Components/Meme.mjs";
 
 
 
@@ -31,6 +31,7 @@ export default function MemeDao() {
         });
     };
 
+    //returns the total number of memes in the database
     this.getMemeNumber = () => {
         return new Promise((resolve, reject) => {
             const query = 'SELECT COUNT(*) as number FROM memes';

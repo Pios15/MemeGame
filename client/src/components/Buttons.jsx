@@ -47,7 +47,7 @@ function LeaderboardButton() {
     return (
       <Row>
         <Col>
-          <Button className="circular-button2" variant="outline-light" onClick={() => navigate("/leaderboard")}> 
+          <Button className="circular-button2" variant="outline-dark" onClick={() => navigate("/leaderboard")}> 
                  <i className="bi bi-trophy "></i>
           </Button>
         </Col>

@@ -77,7 +77,8 @@ i.bi {
 /*direction buttons layout*/
 .btn-card {
   color: rgb(0, 0, 0);
-  background-color: aquamarine;
+  background-color: rgb(127, 219, 255);
+  border: none;
   font-size: 0.75rem;
 }
 
@@ -93,10 +94,17 @@ i.bi {
   opacity: 0.5;
 }
 
+.btn-card:active {
+  color: white !important;
+  background-color: rgb(0, 0, 0) !important;
+  opacity: 0.5;
+}
+
 /*description buttons layout*/
 .btn-description {
   color: white;
   background-color: rgb(0, 0, 0);
+  border: none;
   font-size: 1.2rem;
   width: 100%;
 }
@@ -109,6 +117,11 @@ i.bi {
 .btn-description:disabled {
   color: rgb(15, 14, 14);
   background-color: rgb(255, 174, 0);
+}
+
+.btn-description:active {
+  color: rgb(15, 14, 14) !important;
+  background-color: rgb(255, 174, 0) !important;
 }
 
 /*round title layout*/
@@ -216,7 +229,7 @@ i.bi {
 }
 
 .homeButton:active {
-  color: white !important;
+  color: rgb(153, 153, 153) !important;
   background-color: transparent !important;
   border: transparent !important;
 }

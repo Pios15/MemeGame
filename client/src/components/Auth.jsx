@@ -46,7 +46,7 @@ function LoginForm(props) {
                             <Form.Label>Email</Form.Label>
                             <Form.Control
                                 type="email"
-                                value={username} placeholder="Example: john.doe@polito.it"
+                                value={username} placeholder="Example: count.dooku@gmail.com"
                                 onChange={(ev) => setUsername(ev.target.value)}
                                 required={true}
                             />
@@ -60,7 +60,7 @@ function LoginForm(props) {
                                 required={true}
                             />
                         </Form.Group>
-                        <Button className='home-buttons mt-3' type="submit">
+                        <Button className='home-buttons mt-3' variant='outline-dark' type="submit">
                             Login
                         </Button>
                     </Form>
@@ -115,7 +115,7 @@ function RegisterForm(props) {
                             <Form.Label>Username</Form.Label>
                             <Form.Control
                                 type="text"
-                                value={username} placeholder="Enter your username."
+                                value={username} placeholder="Example: Xx_DarkAngelCraft_xX"
                                 onChange={(ev) => setUsername(ev.target.value)}
                                 required={true}
                             />
@@ -124,7 +124,7 @@ function RegisterForm(props) {
                             <Form.Label>Email</Form.Label>
                             <Form.Control
                                 type="email"
-                                value={email} placeholder="Example: john.doe@polito.it"
+                                value={email} placeholder="Example: lightning.mcQueen@pixar.com"
                                 onChange={(ev) => setEmail(ev.target.value)}
                                 required={true}
                             />
@@ -147,7 +147,7 @@ function RegisterForm(props) {
                                 required={true}
                             />
                         </Form.Group>
-                        <Button className='home-buttons mt-3' type="submit">
+                        <Button className='home-buttons mt-3' variant='outline-dark' type="submit">
                             Register
                         </Button>
                     </Form>

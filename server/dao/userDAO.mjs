@@ -1,4 +1,4 @@
-import db from "../db.mjs";
+import db from "../db/db.mjs";
 import crypto from "crypto";
 
 // NOTE: all functions return error messages as json object { error: <string> }

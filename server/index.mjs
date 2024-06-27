@@ -71,6 +71,11 @@ app.use(session({
     secret: 'I surely hope this works!',
     resave: false,
     saveUninitialized: false
+    //this would solve the samesite problem but since we are not using https it would not work
+    // cookie: {
+    //     sameSite: 'None', // Ensure the SameSite attribute is set to None
+    //     secure: true // Ensure the cookie will only be sent over HTTPS
+    //   }
 
 }));
 app.use(passport.authenticate('session'));

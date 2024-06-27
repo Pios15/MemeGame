@@ -1,7 +1,7 @@
 
 
-import db from "../db.mjs";
-import Best from "../Best.mjs";
+import db from "../db/db.mjs";
+import Best from "../Components/Best.mjs";
 
 
 // NOTE: all functions return error messages as json object { error: <string> } 

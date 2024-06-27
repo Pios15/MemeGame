@@ -1,6 +1,6 @@
 
-import db from "../db.mjs";
-import Answer from "../Answer.mjs";
+import db from "../db/db.mjs";
+import Answer from "../Components/Answer.mjs";
 
 
 
@@ -32,6 +32,7 @@ export default function AnswerDao() {
         });
     };
 
+    // This function returns the total number of answers in the database.
     this.getAnswerNumber = () => {
         return new Promise((resolve, reject) => {
             const query = 'SELECT COUNT(*) as number FROM answers';

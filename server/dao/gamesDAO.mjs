@@ -1,7 +1,7 @@
 
 
-import db from "../db.mjs";
-import Games from "../Games.mjs";
+import db from "../db/db.mjs";
+import Games from "../Components/Games.mjs";
 
 
 

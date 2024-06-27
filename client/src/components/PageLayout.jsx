@@ -19,7 +19,7 @@ export function HomeLayout(props) {
             <Card.Body>
                 <Col>
                 <NewGameButton/>
-                <Button className="home-buttons button-size mt-3 mb-2"  onClick={() => navigate("/info")}>About the Game</Button>
+                <Button className="home-buttons button-size mt-3 mb-2" variant="outline-dark"  onClick={() => navigate("/info")}>What game?</Button>
                 {props.loggedIn ? (
                 <LogoutButton logout={props.logout} />
                 ) : (
@@ -149,7 +149,7 @@ export function LeaderboardLayout({ user }) {
                             <Card.Body>
                                 {[game.meme_id_1, game.meme_id_2, game.meme_id_3].map((meme, index) => (
                                     <Card key={index} className="mb-3" style={{backgroundColor: game[`vote_${index + 1}`] === 5 ? 'green' : 'red'}}>
-                                        <Card.Img variant="top" src={meme} alt={`meme ${index + 1}`} />
+                                        <Card.Img variant="top" src={`/Memes/${meme}.jpeg`} alt={`meme ${index + 1}`} />
                                         <Card.Body>
                                             <Card.Text>Vote: {game[`vote_${index + 1}`]}</Card.Text>
                                         </Card.Body>
@@ -176,12 +176,20 @@ export function LeaderboardLayout({ user }) {
 export function NotFoundLayout() {
     const navigate = useNavigate();
     return (
-        <>
-            <Row><Col><h2>Error: page not found!</h2></Col></Row>
-            <Row><Col> <img src="/GitHub404.png" alt="page not found" className="my-3" style={{display: 'block'}}/>
-            </Col></Row>
-            <Row><Col> <Button className="btn btn-primary mt-2 my-5" onClick={() => navigate("/")}>Go Home!</Button> </Col></Row>
-        </>
+        <Row className="justify-content-md-center">
+            <Col className="mt-3 mb-3" md={5}>
+                <Card className="text-center">
+                    <Card.Header>Error: page not found!</Card.Header>
+                    <Card.Body>
+                        <Card.Img variant="top" src="/GitHub404.png" alt="page not found" className="my-3" />
+                        <Card.Text>
+                            The page you're looking for doesn't exist.
+                        </Card.Text>
+                        <Button className="home-buttons" variant='outline-dark' onClick={() => navigate("/")}>Go Home!</Button>
+                    </Card.Body>
+                </Card>
+        </Col>
+      </Row>
     );
 }
 
